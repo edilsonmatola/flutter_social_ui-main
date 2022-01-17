@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../widgets/curve_clipper.dart';
 
@@ -95,7 +94,7 @@ class LoginScreen extends StatelessWidget {
                   onPressed: () => Navigator.pushReplacement<Object, Object>(
                     context,
                     MaterialPageRoute<dynamic>(
-                      builder: (context) => HomeScreen(),
+                      builder: (context) => const HomeScreen(),
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
