@@ -4,7 +4,7 @@ import '../widgets/curve_clipper.dart';
 import 'home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key key}) : super(key: key);
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +91,7 @@ class LoginScreen extends StatelessWidget {
                 height: 44,
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Navigator.pushReplacement<Object, Object>(
+                  onPressed: () => Navigator.pushReplacement(
                     context,
                     MaterialPageRoute<dynamic>(
                       builder: (context) => const HomeScreen(),
@@ -117,6 +117,7 @@ class LoginScreen extends StatelessWidget {
               ),
               /* Expanded will align the container to the bottom center
               * Fixed to the bottom */
+              //TODO: Use a TextButton to do the Sign in
               Expanded(
                 child: Align(
                   alignment: FractionalOffset.bottomCenter,

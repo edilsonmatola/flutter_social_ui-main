@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 import '../models/post_model.dart';
 
 class PostsCarousel extends StatelessWidget {
-  const PostsCarousel({Key key, this.pageController, this.title, this.posts})
+  const PostsCarousel({Key? key, this.pageController, this.title, this.posts})
       : super(key: key);
 
-  final PageController pageController;
-  final String title;
-  final List<Post> posts;
+  final PageController? pageController;
+  final String? title;
+  final List<Post>? posts;
 
   AnimatedBuilder _buildPost(BuildContext context, int index) {
-    final post = posts[index];
+    final post = posts![index];
     /* Returning stack to be able to put an image behind*/
     return AnimatedBuilder(
-      animation: pageController,
-      builder: (BuildContext context, Widget widget) {
+      animation: pageController!,
+      builder: (BuildContext context, Widget? widget) {
         num value = 1;
-        if (pageController.position.haveDimensions) {
-          value = pageController.page - index;
+        if (pageController!.position.haveDimensions) {
+          value = pageController!.page! - index;
           value = (1 - (value.abs() * 0.25)).clamp(0.0, 1.0);
         }
         return Center(
@@ -47,7 +47,7 @@ class PostsCarousel extends StatelessWidget {
                 height: 310,
                 width: 300,
                 image: AssetImage(
-                  post.imageUrl,
+                  post.imageUrl!,
                 ),
                 fit: BoxFit.cover,
               ),
@@ -72,7 +72,7 @@ class PostsCarousel extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    post.title,
+                    post.title!,
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -80,7 +80,7 @@ class PostsCarousel extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                   ),
                   Text(
-                    post.location,
+                    post.location!,
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
@@ -146,7 +146,7 @@ class PostsCarousel extends StatelessWidget {
         Padding(
           padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
           child: Text(
-            title,
+            title!,
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
@@ -159,7 +159,7 @@ class PostsCarousel extends StatelessWidget {
           child: PageView.builder(
             physics: BouncingScrollPhysics(),
             controller: pageController,
-            itemCount: posts.length,
+            itemCount: posts!.length,
             itemBuilder: _buildPost,
           ),
         ),

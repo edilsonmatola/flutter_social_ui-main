@@ -11,11 +11,11 @@ class User {
     this.favorites,
   });
 
-  final String profileImageUrl;
-  final String backgroundImageUrl;
-  final String name;
-  final int following;
-  final int followers;
-  final List<Post> posts;
-  final List<Post> favorites;
+  final String? profileImageUrl;
+  final String? backgroundImageUrl;
+  final String? name;
+  final int? following;
+  final int? followers;
+  final List<Post>? posts;
+  final List<Post>? favorites;
 }

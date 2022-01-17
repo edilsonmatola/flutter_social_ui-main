@@ -10,10 +10,10 @@ class Post {
     this.comments,
   });
 
-  final String imageUrl;
-  final User author;
-  final String title;
-  final String location;
-  final int likes;
-  final int comments;
+  final String? imageUrl;
+  final User? author;
+  final String? title;
+  final String? location;
+  final int? likes;
+  final int? comments;
 }
