@@ -5,7 +5,7 @@ import '../screens/login_screen.dart';
 import '../screens/profile_screen.dart';
 
 class CustomDrawer extends StatelessWidget {
-  const CustomDrawer({Key key}) : super(key: key);
+  const CustomDrawer({Key? key}) : super(key: key);
 
   ListTile _buildDrawerOptions(Icon icon, String title, Function() onTap) {
     return ListTile(
@@ -29,7 +29,7 @@ class CustomDrawer extends StatelessWidget {
             children: [
               Image(
                 image: AssetImage(
-                  currentUser.backgroundImageUrl,
+                  currentUser.backgroundImageUrl!,
                 ),
                 fit: BoxFit.cover,
                 height: 200,
@@ -54,7 +54,7 @@ class CustomDrawer extends StatelessWidget {
                       child: ClipOval(
                         child: Image(
                           image: AssetImage(
-                            currentUser.profileImageUrl,
+                            currentUser.profileImageUrl!,
                           ),
                           fit: BoxFit.cover,
                         ),
@@ -64,7 +64,7 @@ class CustomDrawer extends StatelessWidget {
                       width: 6,
                     ),
                     Text(
-                      currentUser.name,
+                      currentUser.name!,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 25,

@@ -6,7 +6,7 @@ import '../widgets/following_users.dart';
 import '../widgets/posts_carousel.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -14,8 +14,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
-  TabController _tabController;
-  PageController _pageController;
+  TabController? _tabController;
+  PageController? _pageController;
 
   @override
   void initState() {

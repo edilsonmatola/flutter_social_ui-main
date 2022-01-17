@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../data/data.dart';
 
 class FollowingUsers extends StatelessWidget {
-  const FollowingUsers({Key key}) : super(key: key);
+  const FollowingUsers({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,7 @@ class FollowingUsers extends StatelessWidget {
                       height: 60,
                       width: 60,
                       image: AssetImage(
-                        user.profileImageUrl,
+                        user.profileImageUrl!,
                       ),
                       /* Fitting the image in the box */
                       fit: BoxFit.cover,
