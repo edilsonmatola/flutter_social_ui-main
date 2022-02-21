@@ -1,4 +1,4 @@
-# flutter_social_ui
+# Social Media User Interface (UI)
 
 A new Flutter project.
 
