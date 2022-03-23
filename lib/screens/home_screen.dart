@@ -30,15 +30,16 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle:
-            SystemUiOverlayStyle(statusBarBrightness: Brightness.light),
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarBrightness: Brightness.light,
+        ),
         backgroundColor: Colors.white,
         centerTitle: true,
         iconTheme: IconThemeData(
           color: Theme.of(context).primaryColor,
         ),
         title: Text(
-          'INSTACOPY',
+          'A E M',
           style: TextStyle(
             color: Theme.of(context).primaryColor,
             fontWeight: FontWeight.bold,
