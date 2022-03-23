@@ -7,11 +7,12 @@ import '../screens/profile_screen.dart';
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);
 
-  ListTile _buildDrawerOptions(Icon icon, String title, Function() onTap) {
+  ListTile _buildDrawerOptions(
+      {required Icon icon, String? title, Function()? onTap}) {
     return ListTile(
       leading: icon,
       title: Text(
-        title,
+        title!,
         style: TextStyle(
           fontSize: 20,
         ),
@@ -79,9 +80,11 @@ class CustomDrawer extends StatelessWidget {
           ),
           /* HOME */
           _buildDrawerOptions(
-            Icon(Icons.home_outlined),
-            'Home',
-            () => Navigator.pushReplacement(
+            icon: Icon(
+              Icons.home_outlined,
+            ),
+            title: 'Home',
+            onTap: () => Navigator.pushReplacement(
               context,
               MaterialPageRoute(
                 builder: (_) => HomeScreen(),
@@ -90,21 +93,25 @@ class CustomDrawer extends StatelessWidget {
           ),
           /* CHAT */
           _buildDrawerOptions(
-            Icon(Icons.chat_outlined),
-            'Chat',
-            () {},
+            icon: Icon(Icons.chat_outlined),
+            title: 'Chat',
+            onTap: () {},
           ),
           /* LOCATION */
           _buildDrawerOptions(
-            Icon(Icons.location_on_outlined),
-            'Location',
-            () {},
+            icon: Icon(
+              Icons.location_on_outlined,
+            ),
+            title: 'Location',
+            onTap: () {},
           ),
           /* PROFILE */
           _buildDrawerOptions(
-            Icon(Icons.account_circle_outlined),
-            'Profile',
-            () => Navigator.pushReplacement(
+            icon: Icon(
+              Icons.account_circle_outlined,
+            ),
+            title: 'Profile',
+            onTap: () => Navigator.pushReplacement(
               context,
               MaterialPageRoute(
                 builder: (_) => ProfileScreen(
@@ -115,9 +122,9 @@ class CustomDrawer extends StatelessWidget {
           ),
           /* SETTINGS */
           _buildDrawerOptions(
-            Icon(Icons.settings_outlined),
-            'Settings',
-            () {},
+            icon: Icon(Icons.settings_outlined),
+            title: 'Settings',
+            onTap: () {},
           ),
           Expanded(
             child: Align(
@@ -125,9 +132,9 @@ class CustomDrawer extends StatelessWidget {
               alignment: FractionalOffset.bottomCenter,
               child: /* LOGOUT */
                   _buildDrawerOptions(
-                Icon(Icons.logout_outlined),
-                'Log Out',
-                () => Navigator.pushReplacement(
+                icon: Icon(Icons.logout_outlined),
+                title: 'Log Out',
+                onTap: () => Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (_) => LoginScreen(),
