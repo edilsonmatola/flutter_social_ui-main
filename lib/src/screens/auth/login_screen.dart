@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../core/constants/image_constant.dart';
 import '../../core/utils/curve_clipper_util.dart';
 import '../home/home_screen.dart';
 
@@ -25,7 +26,7 @@ class LoginScreen extends StatelessWidget {
                     /* To fill up to the top of the screen */
                     fit: BoxFit.cover,
                     image: AssetImage(
-                      'assets/images/login_background.jpg',
+                      ImageConstant.loginBackgroundImage,
                     ),
                   ),
                 ),

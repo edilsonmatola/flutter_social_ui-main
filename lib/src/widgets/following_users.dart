@@ -20,7 +20,7 @@ class FollowingUsers extends StatelessWidget {
             ),
           ),
         ),
-        Container(
+        SizedBox(
           height: 80,
           child: ListView.builder(
             /* We set left 10.0 because each of our container has

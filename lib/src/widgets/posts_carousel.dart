@@ -154,7 +154,7 @@ class PostsCarousel extends StatelessWidget {
             ),
           ),
         ),
-        Container(
+        SizedBox(
           height: 400,
           child: PageView.builder(
             physics: BouncingScrollPhysics(),

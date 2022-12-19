@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Social UI',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.blue,
+        primaryColor: Color.fromARGB(255, 18, 82, 134),
       ),
       home: const LoginScreen(),
     );
