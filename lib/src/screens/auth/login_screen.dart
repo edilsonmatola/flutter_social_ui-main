@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../core/constants/image_constant.dart';
 import '../../core/utils/curve_clipper_util.dart';
 import '../home/home_screen.dart';
+import 'widgets/custom_textfield.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -46,20 +48,14 @@ class LoginScreen extends StatelessWidget {
                   height: 10,
                 ),
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.symmetric(vertical: 15),
-                      /* Color of the inside of the text field */
-                      fillColor: Colors.white,
-                      filled: true,
-                      hintText: 'Username',
-                      prefixIcon: Icon(
-                        Icons.person_outline,
-                        size: 30,
-                      ),
-                    ),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 10,
+                  ),
+                  child: CustomTextField(
+                    icon: FontAwesomeIcons.user,
+                    hintText: 'Username',
+                    isObscure: false,
                   ),
                 ),
                 SizedBox(
@@ -70,19 +66,11 @@ class LoginScreen extends StatelessWidget {
                     horizontal: 20,
                     vertical: 10,
                   ),
-                  child: TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.symmetric(vertical: 15),
-                      /* Color of the inside of the text field */
-                      fillColor: Colors.white,
-                      filled: true,
-                      hintText: 'Password',
-                      prefixIcon: Icon(
-                        Icons.lock_outline_rounded,
-                        size: 30,
-                      ),
-                    ),
+                  child: CustomTextField(
+                    icon: FontAwesomeIcons.lock,
+                    isSecret: true,
+                    hintText: 'Password',
+                    isObscure: true,
                   ),
                 ),
                 SizedBox(
