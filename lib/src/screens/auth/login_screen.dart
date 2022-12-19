@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../common_widgets/primary_button.dart';
 import '../../core/constants/image_constant.dart';
 import '../../core/utils/curve_clipper_util.dart';
-import '../home/home_screen.dart';
+import '../home/home_export.dart';
 import 'widgets/custom_textfield.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -76,69 +77,45 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   height: 40,
                 ),
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  height: 44,
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () => Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute<dynamic>(
-                        builder: (context) => const HomeScreen(),
-                      ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Theme.of(context).primaryColor,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                    child: Text(
-                      'Log in',
-                      style: TextStyle(
-                        fontFamily: 'Lato',
-                        fontStyle: FontStyle.normal,
-                        color: Colors.white,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w700,
-                      ),
+                PrimaryButton(
+                  onPressed: () => Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute<dynamic>(
+                      builder: (context) => const HomeScreen(),
                     ),
                   ),
+                  buttonTitle: 'Log In',
                 ),
-                /* Expanded will align the container to the bottom center
-                * Fixed to the bottom */
-                Expanded(
-                  child: Align(
-                    alignment: FractionalOffset.bottomCenter,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Don't you have an account?",
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 2,
-                        ),
-                        TextButton(
-                          style: TextButton.styleFrom(
-                            splashFactory: NoSplash.splashFactory,
-                          ),
-                          onPressed: () {},
-                          child: Text(
-                            'Sign Up',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ],
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Don't you have an account?",
+                      style: TextStyle(
+                        fontSize: 16,
+                      ),
                     ),
-                  ),
+                    SizedBox(
+                      width: 1,
+                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        splashFactory: NoSplash.splashFactory,
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
