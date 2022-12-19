@@ -1,4 +1,7 @@
 class ImageConstant {
+  static const String loginBackgroundImage =
+      'assets/images/login_background.jpg';
+
   // * Posts Images
   static const String post0 = 'assets/images/post0.jpg';
   static const String post1 = 'assets/images/post1.jpg';
