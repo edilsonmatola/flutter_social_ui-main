@@ -19,11 +19,11 @@ class _HomeScreenState extends State<HomeScreen>
 
   @override
   void initState() {
-    super.initState();
     _tabController = TabController(length: 2, vsync: this);
     /* ViewPOrt is the amount of space that our posts will take in our page
     * controller, which is 80% = 0.8*/
     _pageController = PageController(viewportFraction: 0.8);
+    super.initState();
   }
 
   @override
